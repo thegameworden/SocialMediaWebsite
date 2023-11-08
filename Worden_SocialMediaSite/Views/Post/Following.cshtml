@@ -1,0 +1,67 @@
+﻿
+@model IEnumerable<Worden_SocialMediaSite.Models.Post>
+
+@{
+    ViewData["Title"] = "Following";
+    var postList = Model.ToList();
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <title>Following Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="~/styles/style.css">
+</head>
+
+<h1>Following</h1>
+<section id="feed">
+    <table class="table table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th></th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Caption)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model=>model.Author.Username)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Likes)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TimePosted)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (var i = 0; i < postList.Count; i++)
+            {
+                Post post = postList[i];
+
+                <tr class="container post-container">
+                    <td>
+                        @Html.DisplayFor(modelItem => post.Caption)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => post.Author.Username)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => post.Likes)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => post.TimePosted)
+                    </td>
+                    <td>
+                        <a asp-action="details" asp-route-id="@postList[i].Id" class="btn btn-primary btn-sm">View Post</a>
+                        <a asp-action="Edit" asp-route-id="@postList[i].Id" class="btn btn-secondary btn-sm">Edit Post</a>
+                        <a asp-action="Delete" asp-route-id="@postList[i].Id" class="btn btn-danger btn-sm">Delete Post</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</section>

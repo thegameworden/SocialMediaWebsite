@@ -1,0 +1,45 @@
+﻿@model Worden_SocialMediaSite.Models.Post
+
+@{
+    ViewData["Title"] = "PostDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <title>@Model.Caption</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="~/styles/style.css">
+</head>
+
+<div class="container post-container">
+    <div class="post">
+        <h2 class="post-title"><b>(@Model.Author.Username)</b> @Model.Author.FirstName @Model.Author.LastName's Post </h2>
+        <a asp-action="following" class="btn btn-primary btn-sm">View Following Page</a>
+        <p class="post-content">@Model.Caption</p>
+        <p><strong>Likes:</strong> @Model.Likes</p>
+    </div>
+
+    <div class="comments-section">
+        <h3>Add Comment:</h3>
+        <form action="/Comment/Create" method="post">
+            <input type="hidden" name="PostId" value="@Model.Id" />
+            <input type="hidden" name="Likes" value=0 />
+            <input type="text" name="Text" />
+            <button type="submit">Add Comment</button>
+        </form>
+
+        <h3>Comments:</h3>
+        <ul class="list-unstyled">
+
+            @foreach (var comment in Model.Comments)
+            {
+                <li class="comment">
+					<b>@comment.Author.Username: </b>@comment.Text <span class="comment-likes">(Likes: @comment.Likes)</span>
+                </li>
+            }
+        </ul>
+    </div>
+</div>

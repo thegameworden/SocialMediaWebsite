@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "Hash": "Utq0PbfkGbVEcePxUosyQxV6aicRAlhhhMMhu5Fo0TQ=",
+  "Source": "Worden_SocialMediaSite",
+  "BasePath": "_content/Worden_SocialMediaSite",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Worden_SocialMediaSite\\wwwroot",
+      "Source": "Worden_SocialMediaSite",
+      "ContentRoot": "C:\\Users\\ethan\\OneDrive\\Desktop\\School\\CSC595 ASP.NET Web Application\\Worden_SocialMediaSite - With DB\\Worden_SocialMediaSite\\wwwroot\\",
+      "BasePath": "_content/Worden_SocialMediaSite",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\ethan\\OneDrive\\Desktop\\School\\CSC595 ASP.NET Web Application\\Worden_SocialMediaSite - With DB\\Worden_SocialMediaSite\\wwwroot\\images\\Logo.png",
+      "SourceId": "Worden_SocialMediaSite",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ethan\\OneDrive\\Desktop\\School\\CSC595 ASP.NET Web Application\\Worden_SocialMediaSite - With DB\\Worden_SocialMediaSite\\wwwroot\\",
+      "BasePath": "_content/Worden_SocialMediaSite",
+      "RelativePath": "images/Logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Logo.png"
+    },
+    {
+      "Identity": "C:\\Users\\ethan\\OneDrive\\Desktop\\School\\CSC595 ASP.NET Web Application\\Worden_SocialMediaSite - With DB\\Worden_SocialMediaSite\\wwwroot\\styles\\style.css",
+      "SourceId": "Worden_SocialMediaSite",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ethan\\OneDrive\\Desktop\\School\\CSC595 ASP.NET Web Application\\Worden_SocialMediaSite - With DB\\Worden_SocialMediaSite\\wwwroot\\",
+      "BasePath": "_content/Worden_SocialMediaSite",
+      "RelativePath": "styles/style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\styles\\style.css"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "Worden_SocialMediaSite": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:50250;http://localhost:50251"
+    }
+  }
+}

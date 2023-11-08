@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\ethan\\OneDrive\\Desktop\\School\\CSC595 ASP.NET Web Application\\Worden_SocialMediaSite - With DB\\Worden_SocialMediaSite\\wwwroot\\images\\Logo.png",
+      "PackagePath": "staticwebassets\\images\\Logo.png"
+    },
+    {
+      "Id": "C:\\Users\\ethan\\OneDrive\\Desktop\\School\\CSC595 ASP.NET Web Application\\Worden_SocialMediaSite - With DB\\Worden_SocialMediaSite\\wwwroot\\styles\\style.css",
+      "PackagePath": "staticwebassets\\styles\\style.css"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Worden_SocialMediaSite.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.Worden_SocialMediaSite.props",
+      "PackagePath": "build\\Worden_SocialMediaSite.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.Worden_SocialMediaSite.props",
+      "PackagePath": "buildMultiTargeting\\Worden_SocialMediaSite.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.Worden_SocialMediaSite.props",
+      "PackagePath": "buildTransitive\\Worden_SocialMediaSite.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
