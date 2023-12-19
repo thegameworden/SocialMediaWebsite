@@ -17,20 +17,37 @@ namespace Worden_SocialMediaSite.Controllers
         [Route("")]
         [Route("Home")]
         [Route("Main")]
-        public IActionResult Index()
+        public IActionResult Index(string searchByContent, string searchByUser)
         {
             List<Post> posts = _dbContext.Posts.Include(p => p.Author).ToList();
+            if (! String.IsNullOrEmpty(searchByContent))
+            {
+                posts = posts.Where(p => p.Caption.ToUpper().Contains(searchByContent.Trim().ToUpper())).ToList();
+            }
+            if(!String.IsNullOrEmpty(searchByUser))
+            {
+
+                posts = posts.Where(p=>p.Author.UserName.ToUpper().Contains(searchByUser.Trim().ToUpper())).ToList();
+            }
+
             foreach (var post in posts)
             {
-                if(post.Comments != null)
-                post.Comments.Sort(new SortCommentsByLikesAscending());
+                post.Comments?.Sort(new SortCommentsByLikesAscending());
             }
             posts.Sort(new SortPostsByLikes());
+
+            ViewBag.searchByUser = searchByUser;
+            ViewBag.searchByContent = searchByContent;
             return View(posts);
         }
         public IActionResult ForYouPage()
         {
             return Content("This will eventually show a for you page...");
+        }
+
+        public IActionResult Error()
+        {
+            return View();
         }
 
     }

@@ -26,7 +26,7 @@
                     @Html.DisplayNameFor(model => model.Caption)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model=>model.Author.Username)
+                    @Html.DisplayNameFor(model=>model.Author.UserName)
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.Likes)
@@ -47,7 +47,7 @@
                         @Html.DisplayFor(modelItem => post.Caption)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => post.Author.Username)
+                        @Html.DisplayFor(modelItem => post.Author.UserName)
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => post.Likes)
@@ -56,7 +56,7 @@
                         @Html.DisplayFor(modelItem => post.TimePosted)
                     </td>
                     <td>
-                        <a asp-action="details" asp-route-id="@postList[i].Id" class="btn btn-primary btn-sm">View Post</a>
+                        <a asp-action="Details" asp-route-id="@postList[i].Id" class="btn btn-primary btn-sm">View Post</a>
                         <a asp-action="Edit" asp-route-id="@postList[i].Id" class="btn btn-secondary btn-sm">Edit Post</a>
                         <a asp-action="Delete" asp-route-id="@postList[i].Id" class="btn btn-danger btn-sm">Delete Post</a>
                     </td>

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Utq0PbfkGbVEcePxUosyQxV6aicRAlhhhMMhu5Fo0TQ=",
+  "Hash": "QTM4mYAEDHJ6r3arw+KClx+wj3fDX1VxJrpogFLXlhQ=",
   "Source": "Worden_SocialMediaSite",
   "BasePath": "_content/Worden_SocialMediaSite",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "Worden_SocialMediaSite\\wwwroot",
       "Source": "Worden_SocialMediaSite",
-      "ContentRoot": "C:\\Users\\ethan\\OneDrive\\Desktop\\School\\CSC595 ASP.NET Web Application\\Worden_SocialMediaSite - With DB\\Worden_SocialMediaSite\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Ethan Worden\\OneDrive\\Desktop\\School\\CSC595 ASP.NET Web Application\\Worden_SocialMediaSite - With DB\\Worden_SocialMediaSite\\wwwroot\\",
       "BasePath": "_content/Worden_SocialMediaSite",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\ethan\\OneDrive\\Desktop\\School\\CSC595 ASP.NET Web Application\\Worden_SocialMediaSite - With DB\\Worden_SocialMediaSite\\wwwroot\\images\\Logo.png",
+      "Identity": "C:\\Users\\Ethan Worden\\OneDrive\\Desktop\\School\\CSC595 ASP.NET Web Application\\Worden_SocialMediaSite - With DB\\Worden_SocialMediaSite\\wwwroot\\images\\Logo.png",
       "SourceId": "Worden_SocialMediaSite",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ethan\\OneDrive\\Desktop\\School\\CSC595 ASP.NET Web Application\\Worden_SocialMediaSite - With DB\\Worden_SocialMediaSite\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Ethan Worden\\OneDrive\\Desktop\\School\\CSC595 ASP.NET Web Application\\Worden_SocialMediaSite - With DB\\Worden_SocialMediaSite\\wwwroot\\",
       "BasePath": "_content/Worden_SocialMediaSite",
       "RelativePath": "images/Logo.png",
       "AssetKind": "All",
@@ -34,10 +34,10 @@
       "OriginalItemSpec": "wwwroot\\images\\Logo.png"
     },
     {
-      "Identity": "C:\\Users\\ethan\\OneDrive\\Desktop\\School\\CSC595 ASP.NET Web Application\\Worden_SocialMediaSite - With DB\\Worden_SocialMediaSite\\wwwroot\\styles\\style.css",
+      "Identity": "C:\\Users\\Ethan Worden\\OneDrive\\Desktop\\School\\CSC595 ASP.NET Web Application\\Worden_SocialMediaSite - With DB\\Worden_SocialMediaSite\\wwwroot\\styles\\style.css",
       "SourceId": "Worden_SocialMediaSite",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ethan\\OneDrive\\Desktop\\School\\CSC595 ASP.NET Web Application\\Worden_SocialMediaSite - With DB\\Worden_SocialMediaSite\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Ethan Worden\\OneDrive\\Desktop\\School\\CSC595 ASP.NET Web Application\\Worden_SocialMediaSite - With DB\\Worden_SocialMediaSite\\wwwroot\\",
       "BasePath": "_content/Worden_SocialMediaSite",
       "RelativePath": "styles/style.css",
       "AssetKind": "All",

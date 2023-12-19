@@ -3,6 +3,7 @@
 @{
     ViewData["Title"] = "PostDetails";
     Layout = "~/Views/Shared/_Layout.cshtml";
+
 }
 <head>
     <title>@Model.Caption</title>
@@ -16,8 +17,12 @@
 
 <div class="container post-container">
     <div class="post">
-        <h2 class="post-title"><b>(@Model.Author.Username)</b> @Model.Author.FirstName @Model.Author.LastName's Post </h2>
-        <a asp-action="following" class="btn btn-primary btn-sm">View Following Page</a>
+        <h2 class="post-title"><b>(@Model.Author.UserName)</b> @Model.Author.FirstName @Model.Author.LastName's Post </h2>
+        <a asp-action="following" class="btn btn-primary btn-sm">View Following Page</a><br />
+        @if(ViewBag.ImageUrl != null)
+        {
+            <img src = "@ViewBag.ImageUrl"/>
+        }
         <p class="post-content">@Model.Caption</p>
         <p><strong>Likes:</strong> @Model.Likes</p>
     </div>
@@ -28,16 +33,51 @@
             <input type="hidden" name="PostId" value="@Model.Id" />
             <input type="hidden" name="Likes" value=0 />
             <input type="text" name="Text" />
+            <input type="hidden" name="TimeCommented" value = "@DateTime.Now"/>
             <button type="submit">Add Comment</button>
+            @if (TempData["Error"] != null)
+            {
+                    <div class="alert alert-danger">
+                    @Html.Raw(TempData["Error"].ToString().Replace("\n", "<br>"))
+                    </div>
+            }
         </form>
+       
 
         <h3>Comments:</h3>
         <ul class="list-unstyled">
 
             @foreach (var comment in Model.Comments)
             {
+                
+
+                @functions {
+                public static string FormatTimeAgo(DateTime commentTime)
+                {
+                    var timeSpan = DateTime.Now - commentTime;
+                    if (commentTime == DateTime.MinValue)
+                        return "";
+
+                    if (timeSpan.TotalDays >= 365)
+                        return $"{(int)timeSpan.TotalDays/365}y";
+                    if (timeSpan.TotalDays > 13)
+                        return $"{(int)timeSpan.Days / 7}w, {timeSpan.Days %7}d";
+                    if (timeSpan.TotalDays > 1)
+                        return $"{timeSpan.Days}d, {timeSpan.Hours}h";
+                    if (timeSpan.TotalHours > 1)
+                        return $"{timeSpan.Hours}h, {timeSpan.Minutes}m";
+                    if (timeSpan.TotalMinutes > 1)
+                        return $"{timeSpan.Minutes}m, {timeSpan.Seconds}s";
+
+                    return $"{timeSpan.Seconds}s";
+                }
+            }
+
+
                 <li class="comment">
-					<b>@comment.Author.Username: </b>@comment.Text <span class="comment-likes">(Likes: @comment.Likes)</span>
+                    <b>@comment.Author.UserName:</b> @comment.Text
+                    <span class="comment-likes">(Likes: @comment.Likes)</span>
+                    <span class="comment-time">Comment Time: @FormatTimeAgo(comment.TimeCommented)</span>
                 </li>
             }
         </ul>

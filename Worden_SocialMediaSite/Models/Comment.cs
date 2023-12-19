@@ -7,12 +7,12 @@ namespace Worden_SocialMediaSite.Models
         public int Id { get; set; }
         [InappropriateLanguage(ErrorMessage = "This comment contains inappropriate language.")]
         public string Text { get; set; }
-        public int Likes { get; set; }
+        public int Likes { get; set; } = 0;
 
-        public Account Author { get; set; }
-        public int AuthorId { get; set; }
-
-
+        public Data.Account Author { get; set; }
+        public string AuthorId { get; set; }
+        public List<Comment> Replies { get; set; } = new List<Comment>();
+        public DateTime TimeCommented { get; set; } = DateTime.MinValue;
         public Post Post { get; set; }
         public int PostId { get; set; }
 

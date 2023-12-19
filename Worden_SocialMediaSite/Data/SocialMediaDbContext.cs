@@ -1,9 +1,10 @@
 ﻿using Worden_SocialMediaSite.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace Worden_SocialMediaSite.Data
 {
-    public class SocialMediaDbContext : DbContext
+    public class SocialMediaDbContext : IdentityDbContext<Account>
     {
         public DbSet<Post> Posts => Set<Post>();
         public DbSet<Account> Accounts => Set<Account>();
@@ -12,8 +13,8 @@ namespace Worden_SocialMediaSite.Data
         {
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
-        
-            {base.OnModelCreating(modelBuilder);
+        {
+            base.OnModelCreating(modelBuilder);
             // Configure relationship between Account and Post
             modelBuilder.Entity<Account>()
                 .HasMany(a => a.PersonalPosts)  // One-to-Many from Account to Post
@@ -30,71 +31,63 @@ namespace Worden_SocialMediaSite.Data
                 .HasForeignKey(c=> c.PostId);
 
 
-                
+
+            /*
+   
             modelBuilder.Entity<Account>().HasData(
                 new Account
                 {
-                    Id = 1,
-                    Username = "ethanworden",
-                    FirstName = "Ethan",
-                    LastName = "Worden",
-                    Email="email@gmail.com",
-                    Password = "1234"
-
-                },
-                new Account
-                {
-                    Id= 2,
-                    Username = "tommyJoe-123",
+                    Id= "2",
+                    UserName = "tommyJoe-123",
                     FirstName = "Thomas",
                     LastName = "Joe",
                     Email = "email@gmail.com",
-                    Password = "1234"
+                    PasswordHash = "1234"
                 },
                 new Account
                 {   
-                    Id=3,
-                    Username = "user1",
+                    Id="3",
+                    UserName = "user1",
                     FirstName = "John",
                     LastName = "Doe",
                     Email = "email@gmail.com",
-                    Password = "1234"
+                    PasswordHash = "1234"
                 },
                 new Account
                 {
-                    Id=4,
-                    Username = "user2",
+                    Id="4",
+                    UserName = "user2",
                     FirstName = "Jane",
                     LastName = "Smith",
                     Email = "email@gmail.com",
-                    Password = "1234"
+                    PasswordHash = "1234"
                 },
                 new Account
                 {
-                    Id=5,
-                    Username = "user3",
+                    Id="5",
+                    UserName = "user3",
                     FirstName = "Alice",
                     LastName = "Wonders",
                     Email = "email@gmail.com",
-                    Password = "1234"
+                    PasswordHash = "1234"
                 },
                 new Account
                 {
-                    Id=6,
-                    Username = "user4",
+                    Id="6",
+                    UserName = "user4",
                     FirstName = "Bob",
                     LastName = "Builder",
                     Email = "email@gmail.com",
-                    Password = "1234"
+                    PasswordHash = "1234"
                 },
                 new Account
                 {
-                    Id=7,
-                    Username = "user5",
+                    Id="7",
+                    UserName = "user5",
                     FirstName = "Charlie",
                     LastName = "Chocolate",
                     Email = "email@gmail.com",
-                    Password = "1234"
+                    PasswordHash = "1234"
                 }
                 );
 
@@ -107,7 +100,7 @@ namespace Worden_SocialMediaSite.Data
                     Caption = "This is the post caption for post B",
                     Likes = 30456,
                     TimePosted = new DateTime(2023, 10, 6, 3, 56, 0),
-                    AuthorId = 1
+                    AuthorId = "2"
                   
                 },
                 new Post
@@ -115,7 +108,7 @@ namespace Worden_SocialMediaSite.Data
                     Id = 2,
                     Caption = "Caption for post 1",
                     Likes = 50,
-                    AuthorId = 2,
+                    AuthorId = "2",
                     TimePosted = new DateTime(2022, 5, 10, 12, 30, 0)
                 },
                 new Post
@@ -124,7 +117,7 @@ namespace Worden_SocialMediaSite.Data
                     Caption = "Caption for post 2",
                     Likes = 70,
                     TimePosted = new DateTime(2022, 5, 11, 14, 25, 0),
-                    AuthorId = 3
+                    AuthorId = "3"
                 },
                 new Post
                 {
@@ -132,7 +125,7 @@ namespace Worden_SocialMediaSite.Data
                     Caption = "Caption for post 3",
                     Likes = 45,
                     TimePosted = new DateTime(2022, 5, 12, 16, 20, 0),
-                    AuthorId = 4
+                    AuthorId = "4"
                 },
                 new Post
                 {
@@ -140,7 +133,7 @@ namespace Worden_SocialMediaSite.Data
                     Caption = "Caption for post 4",
                     Likes = 90,
                     TimePosted = new DateTime(2022, 5, 13, 18, 15, 0),
-                    AuthorId= 5
+                    AuthorId= "5"
                 },
                 new Post
                 {
@@ -148,7 +141,7 @@ namespace Worden_SocialMediaSite.Data
                     Caption = "Caption for post 5",
                     Likes = 30,
                     TimePosted = new DateTime(2022, 5, 14, 20, 10, 0),
-                    AuthorId = 6
+                    AuthorId = "6"
                 },
                 new Post
                  {
@@ -156,7 +149,7 @@ namespace Worden_SocialMediaSite.Data
                      Caption = "This is the post caption for post A",
                      Likes = 27,
                      TimePosted = new DateTime(2023, 1, 1, 0, 0, 0),
-                     AuthorId = 7
+                     AuthorId = "7"
                  }
                 );
 
@@ -167,7 +160,7 @@ namespace Worden_SocialMediaSite.Data
                     Text = "WOW GREAT CONTENT",
                     Likes = 10,
                     PostId = 1,
-                    AuthorId=2
+                    AuthorId="2"
                 },
                 new Comment
                 {
@@ -175,7 +168,7 @@ namespace Worden_SocialMediaSite.Data
                     Text = "BOoooooooooOOOOOOoooooo",
                     Likes = 4,
                     PostId=1,
-                    AuthorId = 1
+                    AuthorId = "2"
                 },
                 new Comment
                 {
@@ -183,7 +176,7 @@ namespace Worden_SocialMediaSite.Data
                     Text = "try /1 if you haven't already...",
                     Likes = 987645,
                     PostId=1,
-                    AuthorId = 1
+                    AuthorId = "2"
                 },
  
                 new Comment { 
@@ -191,7 +184,7 @@ namespace Worden_SocialMediaSite.Data
                     Id=7, 
                     Text = "Great post!", 
                     Likes = 15, 
-                    AuthorId = 1
+                    AuthorId = "2"
                 },
                    
                 new Comment {
@@ -199,7 +192,7 @@ namespace Worden_SocialMediaSite.Data
                     Id=8, 
                     Text = "Loved it!",
                     Likes = 20,
-                    AuthorId = 1
+                    AuthorId = "2"
                 },
 
                 new Comment {
@@ -207,7 +200,7 @@ namespace Worden_SocialMediaSite.Data
                     Id=9, 
                     Text = "Amazing!", 
                     Likes = 10 ,
-                    AuthorId = 1 
+                    AuthorId = "2" 
                 },
 
                 new Comment {
@@ -215,7 +208,7 @@ namespace Worden_SocialMediaSite.Data
                     Id =10,
                     Text = "Fantastic post!",
                     Likes = 25 , 
-                    AuthorId = 1 
+                    AuthorId = "2" 
                 },
 
 
@@ -224,7 +217,7 @@ namespace Worden_SocialMediaSite.Data
                     Id= 11,
                     Text = "Keep it up!", 
                     Likes = 5 , 
-                    AuthorId = 1 
+                    AuthorId = "2" 
                 },
 
                 new Comment
@@ -233,7 +226,7 @@ namespace Worden_SocialMediaSite.Data
                     Id=1,
                     Text = "This is one comment",
                     Likes = 10,
-                    AuthorId = 1
+                    AuthorId = "2"
                 },
                 new Comment
                 {
@@ -241,7 +234,7 @@ namespace Worden_SocialMediaSite.Data
                     Id=2,
                     Text = "This is another comment",
                     Likes = 4,
-                    AuthorId = 1
+                    AuthorId = "2"
                 },
                 new Comment
                 {
@@ -249,10 +242,11 @@ namespace Worden_SocialMediaSite.Data
                     Id=3,
                     Text = "try /1 if you haven't already...",
                     Likes = 987645,
-                    AuthorId = 1
+                    AuthorId = "2"
                 }
                );
-
+            */
+            
         }
     }
 
