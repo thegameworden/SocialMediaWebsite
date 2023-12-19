@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using System.Security.Claims;
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -28,16 +29,31 @@
             <div class="collapse navbar-collapse" id="navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li class="active"><a asp-controller="Home" asp-action="">Home</a></li>
-                    <li><a href="#">Profile</a></li>
+                    <li><a class="nav-link" asp-action="Details" asp-controller="Accounts" asp-route-id="@User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value">Profile</a></li>
                     <li><a href="#">Messages</a></li>
                     <li><a href="#">Notifications</a></li>
-                    <li><a asp-controller="post" asp-action="following">Following</a></li>
-                </ul>
-                <form class="navbar-form navbar-right" role="search">
+                    <li><a asp-controller="Post" asp-action="following">Following</a></li>
+                    <li><a asp-controller="Accounts" asp-action="Index">ADMIN SECTION</a></li>
+                
+                <form class="navbar-form navbar-right" role="search" asp-action="Index" asp-controller="Home" method="get">
                     <div class="form-group">
-                        <input type="text" class="form-control custom-search" placeholder="Search">
+                        <input class="form-control custom-search" name="searchByUser" placeholder="search by username" value="@ViewBag.searchByUser" id="searchButton" />
+                        <button type="submit">Search</button>
+                        <button onclick="document.getElementById('searchButton').value=null">Reset search</button>
                     </div>
                 </form>
+                                @if (User.Identity.IsAuthenticated)
+                {
+
+						<li><a class="nav-link" asp-action="Logout" asp-controller="Accounts"><b>(@User.Identity.Name)</b> Logout?</a></li>
+                   
+                }
+                else
+                {
+
+                        <li><a class="nav-link" asp-action="Login" asp-controller="Accounts">Login</a></li>
+                }     
+                </ul>
             </div>
         </div>
     </nav>

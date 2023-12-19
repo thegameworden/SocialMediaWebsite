@@ -1,0 +1,101 @@
+﻿@model Worden_SocialMediaSite.Models.Account
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<h1>Edit</h1>
+
+<h4>Account</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="UserName" class="control-label"></label>
+                <input asp-for="UserName" class="form-control" />
+                <span asp-validation-for="UserName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PasswordHash" class="control-label"></label>
+                <input asp-for="PasswordHash" class="form-control" />
+                <span asp-validation-for="PasswordHash" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FirstName" class="control-label"></label>
+                <input asp-for="FirstName" class="form-control" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastName" class="control-label"></label>
+                <input asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PhoneNumber" class="control-label"></label>
+                <input asp-for="PhoneNumber" class="form-control" />
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+        <!-- Current Followers-->
+        <div>
+            <h2>Current Followers: @Model.Followers.Count</h2>
+            @foreach (var follower in Model.Followers)
+            {
+
+                <form asp-action="RemoveFollower" asp-route-id="@follower.Id" method="post">
+                    <input type="hidden" name="userId" value="@Model.Id" />
+                    <input type="hidden" name="FollowerId" value="@follower.Id" />
+                    <p>
+                        @follower.UserName
+                        <button type="submit" class="btn btn-danger">Remove Follower</button>
+                    </p>
+                </form>
+            }
+        </div>
+
+            <!-- Current Following List -->
+            <div>
+                <h2>Currently Following: @Model.Following.Count</h2>
+                @foreach (var following in Model.Following)
+                {
+                    <p>@following.UserName</p>
+                }
+            </div>
+            <!-- Suggested Followimg List -->
+        <div>
+            <h2>Suggestions</h2>
+            @foreach (var suggestedAccount in ViewBag.SuggestedAccounts)
+            {
+                
+                <form asp-action="FollowAccount" asp-route-id="@suggestedAccount.Id" method="post">
+                    <input type="hidden" name="userId" value="@Model.Id" />
+                    <input type="hidden" name="FollowingId" value="@suggestedAccount.Id"/>
+                    <p>@suggestedAccount.UserName
+						<button type="submit" class="btn btn-success">Follow</button>
+					</p>
+                </form>
+            }
+        </div>
+
+
+
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

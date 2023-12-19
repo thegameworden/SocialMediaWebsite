@@ -7,6 +7,7 @@ namespace Worden_SocialMediaSite.Services
         public List<Post> allPosts { get; set; }
 
         public PostService() {
+            /*
             allPosts = new List<Post>
             {
                 new Post
@@ -17,7 +18,7 @@ namespace Worden_SocialMediaSite.Services
                     TimePosted = new DateTime(2023, 1, 1, 0,0,0),
                     Author = new Account
                     {
-                        Username = "ethanworden",
+                        UserName = "ethanworden",
                         FirstName = "Ethan",
                         LastName = "Worden"
                     },
@@ -27,19 +28,19 @@ namespace Worden_SocialMediaSite.Services
                         {
                             Text = "This is one comment",
                             Likes = 10,
-                            AuthorId=1
+                            AuthorId="1"
                         },
                         new Comment
                         {
                             Text = "This is another comment",
                             Likes = 4,
-                            AuthorId=1
+                            AuthorId="1"
                         },
                         new Comment
                         {
                             Text = "try /1 if you haven't already...",
                             Likes = 987645,
-                            AuthorId=1
+                            AuthorId="1"
                         }
                     }
                 },
@@ -51,7 +52,7 @@ namespace Worden_SocialMediaSite.Services
                     TimePosted = new DateTime(2023, 10, 6, 3, 56, 0),
                     Author = new Account
                     {
-                        Username = "user1",
+                        UserName = "user1",
                         FirstName = "John",
                         LastName = "Doe"
                     },
@@ -85,7 +86,7 @@ namespace Worden_SocialMediaSite.Services
                     TimePosted = new DateTime(2022, 5, 10, 12, 30, 0),
                     Author = new Account
                     {
-                        Username = "user1",
+                        UserName = "user1",
                         FirstName = "John",
                         LastName = "Doe"
                     },
@@ -102,7 +103,7 @@ namespace Worden_SocialMediaSite.Services
                     TimePosted = new DateTime(2022, 5, 11, 14, 25, 0),
                     Author = new Account
                     {
-                        Username = "user2",
+                        UserName = "user2",
                         FirstName = "Jane",
                         LastName = "Smith"
                     },
@@ -119,7 +120,7 @@ namespace Worden_SocialMediaSite.Services
                     TimePosted = new DateTime(2022, 5, 12, 16, 20, 0),
                     Author = new Account
                     {
-                        Username = "user3",
+                        UserName = "user3",
                         FirstName = "Alice",
                         LastName = "Wonders"
                     },
@@ -136,7 +137,7 @@ namespace Worden_SocialMediaSite.Services
                     TimePosted = new DateTime(2022, 5, 13, 18, 15, 0),
                     Author = new Account
                     {
-                        Username = "user4",
+                        UserName = "user4",
                         FirstName = "Bob",
                         LastName = "Builder"
                     },
@@ -153,7 +154,7 @@ namespace Worden_SocialMediaSite.Services
                     TimePosted = new DateTime(2022, 5, 14, 20, 10, 0),
                     Author = new Account
                     {
-                        Username = "user5",
+                        UserName = "user5",
                         FirstName = "Charlie",
                         LastName = "Chocolate"
                     },
@@ -163,6 +164,7 @@ namespace Worden_SocialMediaSite.Services
                     }
                 }
             };
+            */
         }
 
     }

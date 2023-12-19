@@ -1,5 +1,8 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Hosting;
 using Worden_SocialMediaSite.Data;
 using Worden_SocialMediaSite.Models;
 
@@ -8,16 +11,13 @@ namespace Worden_SocialMediaSite.Controllers
     public class CommentController : Controller
     {
         private SocialMediaDbContext _dbContext;
-        public CommentController(SocialMediaDbContext _dbContext)
+        private readonly UserManager<Data.Account> _userManager;
+        public CommentController(SocialMediaDbContext _dbContext, UserManager<Data.Account> userManager)
         {
             this._dbContext = _dbContext;
-
+            _userManager = userManager;
         }
-        Account localAccount = new()
-        {
-            Id = 1
 
-        };
         // GET: CommentController
         public ActionResult Index()
         {
@@ -25,6 +25,7 @@ namespace Worden_SocialMediaSite.Controllers
         }
 
         // GET: CommentController/Details/5
+
         public ActionResult Details(int id)
         {
             return View();
@@ -32,19 +33,28 @@ namespace Worden_SocialMediaSite.Controllers
 
         // GET: CommentController/Create
         [HttpPost]
-        public ActionResult Create(Comment comment)
+        [Authorize]
+        public async Task<ActionResult> CreateAsync(Comment comment)
         {
             ModelState.Remove("Author");
             ModelState.Remove("AuthorId");
             ModelState.Remove("Post");
-
+            
             if (!ModelState.IsValid)
             {
-                return RedirectToAction("details", "Post", new { id = comment.PostId });
+                foreach (var modelState in ViewData.ModelState.Values)
+                {
+                    foreach (var error in modelState.Errors)
+                    {
+                        TempData["Error"] += error.ErrorMessage + "\n";
+                    }
+                }
+                    return RedirectToAction("details", "Post", new { id = comment.PostId });
             }
-            comment.Author = _dbContext.Accounts.Find(localAccount.Id);
-            comment.AuthorId = localAccount.Id;
-            comment.Post = _dbContext.Posts.Find(comment.PostId);
+            /* comment.Author = _dbContext.Accounts.Find(localAccount.Id);
+             comment.AuthorId = localAccount.Id;
+             comment.Post = _dbContext.Posts.Find(comment.PostId);*/
+            comment.Author = await _userManager.GetUserAsync(User);
             _dbContext.Comments.Add(comment);
             _dbContext.SaveChanges();
             return RedirectToAction("details", "Post", new { id = comment.PostId });

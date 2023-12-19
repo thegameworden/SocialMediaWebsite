@@ -992,3 +992,41 @@ C:\Users\Ethan Worden\OneDrive\Desktop\School\CSC595 ASP.NET Web Application\Wor
 C:\Users\Ethan Worden\OneDrive\Desktop\School\CSC595 ASP.NET Web Application\Worden_SocialMediaSite - With DB\Worden_SocialMediaSite\obj\Debug\net6.0\Worden_SocialMediaSite.pdb
 C:\Users\Ethan Worden\OneDrive\Desktop\School\CSC595 ASP.NET Web Application\Worden_SocialMediaSite - With DB\Worden_SocialMediaSite\obj\Debug\net6.0\Worden_SocialMediaSite.genruntimeconfig.cache
 C:\Users\Ethan Worden\OneDrive\Desktop\School\CSC595 ASP.NET Web Application\Worden_SocialMediaSite - With DB\Worden_SocialMediaSite\obj\Debug\net6.0\ref\Worden_SocialMediaSite.dll
+C:\Users\Ethan Worden\OneDrive\Desktop\School\CSC595 ASP.NET Web Application\Worden_SocialMediaSite - With DB\Worden_SocialMediaSite\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\Ethan Worden\OneDrive\Desktop\School\CSC595 ASP.NET Web Application\Worden_SocialMediaSite - With DB\Worden_SocialMediaSite\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Ethan Worden\OneDrive\Desktop\School\CSC595 ASP.NET Web Application\Worden_SocialMediaSite - With DB\Worden_SocialMediaSite\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\Ethan Worden\OneDrive\Desktop\School\CSC595 ASP.NET Web Application\Worden_SocialMediaSite - With DB\Worden_SocialMediaSite\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+C:\Users\Ethan Worden\OneDrive\Desktop\School\CSC595 ASP.NET Web Application\Worden_SocialMediaSite - With DB\Worden_SocialMediaSite\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Ethan Worden\OneDrive\Desktop\School\CSC595 ASP.NET Web Application\Worden_SocialMediaSite - With DB\Worden_SocialMediaSite\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Ethan Worden\OneDrive\Desktop\School\CSC595 ASP.NET Web Application\Worden_SocialMediaSite - With DB\Worden_SocialMediaSite\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Ethan Worden\OneDrive\Desktop\School\CSC595 ASP.NET Web Application\Worden_SocialMediaSite - With DB\Worden_SocialMediaSite\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Ethan Worden\OneDrive\Desktop\School\CSC595 ASP.NET Web Application\Worden_SocialMediaSite - With DB\Worden_SocialMediaSite\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Ethan Worden\OneDrive\Desktop\School\CSC595 ASP.NET Web Application\Worden_SocialMediaSite - With DB\Worden_SocialMediaSite\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Ethan Worden\OneDrive\Desktop\School\CSC595 ASP.NET Web Application\Worden_SocialMediaSite - With DB\Worden_SocialMediaSite\bin\Debug\net6.0\System.Runtime.Caching.dll
+C:\Users\Ethan Worden\OneDrive\Desktop\School\CSC595 ASP.NET Web Application\Worden_SocialMediaSite - With DB\Worden_SocialMediaSite\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\Ethan Worden\OneDrive\Desktop\School\CSC595 ASP.NET Web Application\Worden_SocialMediaSite - With DB\Worden_SocialMediaSite\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\Ethan Worden\OneDrive\Desktop\School\CSC595 ASP.NET Web Application\Worden_SocialMediaSite - With DB\Worden_SocialMediaSite\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Ethan Worden\OneDrive\Desktop\School\CSC595 ASP.NET Web Application\Worden_SocialMediaSite - With DB\Worden_SocialMediaSite\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Ethan Worden\OneDrive\Desktop\School\CSC595 ASP.NET Web Application\Worden_SocialMediaSite - With DB\Worden_SocialMediaSite\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Ethan Worden\OneDrive\Desktop\School\CSC595 ASP.NET Web Application\Worden_SocialMediaSite - With DB\Worden_SocialMediaSite\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Ethan Worden\OneDrive\Desktop\School\CSC595 ASP.NET Web Application\Worden_SocialMediaSite - With DB\Worden_SocialMediaSite\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\ethan\OneDrive\Desktop\School\CSC595 ASP.NET Web Application\Worden_SocialMediaSite - With DB\Worden_SocialMediaSite\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\ethan\OneDrive\Desktop\School\CSC595 ASP.NET Web Application\Worden_SocialMediaSite - With DB\Worden_SocialMediaSite\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\ethan\OneDrive\Desktop\School\CSC595 ASP.NET Web Application\Worden_SocialMediaSite - With DB\Worden_SocialMediaSite\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\ethan\OneDrive\Desktop\School\CSC595 ASP.NET Web Application\Worden_SocialMediaSite - With DB\Worden_SocialMediaSite\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\ethan\OneDrive\Desktop\School\CSC595 ASP.NET Web Application\Worden_SocialMediaSite - With DB\Worden_SocialMediaSite\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+C:\Users\ethan\OneDrive\Desktop\School\CSC595 ASP.NET Web Application\Worden_SocialMediaSite - With DB\Worden_SocialMediaSite\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\ethan\OneDrive\Desktop\School\CSC595 ASP.NET Web Application\Worden_SocialMediaSite - With DB\Worden_SocialMediaSite\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\ethan\OneDrive\Desktop\School\CSC595 ASP.NET Web Application\Worden_SocialMediaSite - With DB\Worden_SocialMediaSite\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\ethan\OneDrive\Desktop\School\CSC595 ASP.NET Web Application\Worden_SocialMediaSite - With DB\Worden_SocialMediaSite\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\ethan\OneDrive\Desktop\School\CSC595 ASP.NET Web Application\Worden_SocialMediaSite - With DB\Worden_SocialMediaSite\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\ethan\OneDrive\Desktop\School\CSC595 ASP.NET Web Application\Worden_SocialMediaSite - With DB\Worden_SocialMediaSite\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\ethan\OneDrive\Desktop\School\CSC595 ASP.NET Web Application\Worden_SocialMediaSite - With DB\Worden_SocialMediaSite\bin\Debug\net6.0\System.Runtime.Caching.dll
+C:\Users\ethan\OneDrive\Desktop\School\CSC595 ASP.NET Web Application\Worden_SocialMediaSite - With DB\Worden_SocialMediaSite\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\ethan\OneDrive\Desktop\School\CSC595 ASP.NET Web Application\Worden_SocialMediaSite - With DB\Worden_SocialMediaSite\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\ethan\OneDrive\Desktop\School\CSC595 ASP.NET Web Application\Worden_SocialMediaSite - With DB\Worden_SocialMediaSite\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\ethan\OneDrive\Desktop\School\CSC595 ASP.NET Web Application\Worden_SocialMediaSite - With DB\Worden_SocialMediaSite\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\ethan\OneDrive\Desktop\School\CSC595 ASP.NET Web Application\Worden_SocialMediaSite - With DB\Worden_SocialMediaSite\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\ethan\OneDrive\Desktop\School\CSC595 ASP.NET Web Application\Worden_SocialMediaSite - With DB\Worden_SocialMediaSite\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\ethan\OneDrive\Desktop\School\CSC595 ASP.NET Web Application\Worden_SocialMediaSite - With DB\Worden_SocialMediaSite\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\Ethan Worden\OneDrive\Desktop\School\CSC595 ASP.NET Web Application\Worden_SocialMediaSite - With DB\Worden_SocialMediaSite\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
